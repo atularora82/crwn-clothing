@@ -43,8 +43,50 @@ class App extends React.Component {
     this.unsubscribeFromAuth();
   }
 
+  
 
    render(){
+
+    const data1 = {
+      card: {
+        artworks: {
+          artwork_1: {
+            fieldName: "name",
+            data: [
+              {
+                locale: "en",
+                labelId: "some label id1",
+                form: "some form value1",
+                image: "some image value1"
+              }
+            ]
+          }
+        }
+      }
+    };
+    console.log(data1);
+
+    const data2 = {
+      artworksProgramCard: [
+        'artwork_1',
+        'artwork_2'
+      ]
+    };
+  
+    console.log(data2.artworksProgramCard[0]);
+
+    const my = data2.artworksProgramCard[0]
+
+    const data3 = {
+      [`"${my}"`]:{
+        artwoks:{
+
+        }
+      }
+    }
+ 
+    console.log(data3);
+
     return (
       <div>
         <Header />
